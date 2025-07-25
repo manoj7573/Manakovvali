@@ -4,10 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ManaKovvali</title>
+  
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
+  <img src="logo.png" alt="Mana Kovvali Logo" class="site-logo" />
     <h1>Welcome to Mana Kovvali</h1>
     <nav>
       <a href="#about">About</a>
@@ -53,5 +55,13 @@
   <footer>
     <p>&copy; 2025 My Village. All rights reserved.</p>
   </footer>
+  <script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navbar = document.getElementById('navbar');
+
+  menuToggle.addEventListener('click', () => {
+    navbar.classList.toggle('active');
+  });
+</script>
 </body>
 </html>
