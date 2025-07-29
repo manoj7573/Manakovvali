@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jobs - Manakovvali</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .active-btn {
+      background-color: green;
+      color: white;
+    }
+    .job-card {
+      border-left: 5px solid green;
+      margin-bottom: 15px;
+      background: #f8fff8;
+      padding: 15px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">Manakovvali</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+      data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" 
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+        <li class="nav-item"><a class="nav-link active" href="jobs.html">Jobs</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Title -->
+<div class="container mt-4">
+  <h2 class="text-center text-success">Let us grow and let the community grow</h2>
+
+  <!-- Toggle Buttons -->
+  <div class="text-center mt-3">
+    <button id="postJobBtn" class="btn active-btn" onclick="showPostJob()">Post a Job</button>
+    <button id="lookJobBtn" class="btn btn-outline-success" onclick="showLookJob()">Look for a Job</button>
+  </div>
+
+  <!-- Post Job Form -->
+  <div class="mt-4" id="postJobSection">
+    <div class="card p-3">
+      <h4>Post a Job</h4>
+      <input type="text" id="jobTitle" placeholder="Job Title" class="form-control mb-2">
+      <textarea id="jobDesc" placeholder="Job Description" class="form-control mb-2"></textarea>
+      <input type="text" id="jobContact" placeholder="Contact Details" class="form-control mb-2">
+      <button class="btn btn-success" onclick="addJob()">Add Job</button>
+    </div>
+  </div>
+
+  <!-- Look for Job Section -->
+  <div class="mt-4" id="lookJobSection" style="display:none;">
+    <h4>Available Jobs</h4>
+    <div id="jobsContainer"></div>
+  </div>
+</div>
+
+<script>
+  let jobs = [];
+
+  function showPostJob() {
+    document.getElementById('postJobSection').style.display = 'block';
+    document.getElementById('lookJobSection').style.display = 'none';
+    document.getElementById('postJobBtn').classList.add('active-btn');
+    document.getElementById('lookJobBtn').classList.remove('active-btn');
+  }
+
+  function showLookJob() {
+    document.getElementById('postJobSection').style.display = 'none';
+    document.getElementById('lookJobSection').style.display = 'block';
+    document.getElementById('lookJobBtn').classList.add('active-btn');
+    document.getElementById('postJobBtn').classList.remove('active-btn');
+    displayJobs();
+  }
+
+  function addJob() {
+    let title = document.getElementById('jobTitle').value.trim();
+    let desc = document.getElementById('jobDesc').value.trim();
+    let contact = document.getElementById('jobContact').value.trim();
+
+    if(title && desc && contact){
+      jobs.push({title, desc, contact});
+      document.getElementById('jobTitle').value = '';
+      document.getElementById('jobDesc').value = '';
+      document.getElementById('jobContact').value = '';
+      alert("Job Posted Successfully!");
+    } else {
+      alert("Please fill all fields!");
+    }
+  }
+
+  function displayJobs() {
+    let container = document.getElementById('jobsContainer');
+    container.innerHTML = '';
+    if(jobs.length === 0){
+      container.innerHTML = '<p>No jobs available right now.</p>';
+    } else {
+      jobs.forEach(job => {
+        container.innerHTML += `
+          <div class="job-card">
+            <h5>${job.title}</h5>
+            <p>${job.desc}</p>
+            <p><b>Contact:</b> ${job.contact}</p>
+          </div>
+        `;
+      });
+    }
+  }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
