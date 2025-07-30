@@ -2,157 +2,128 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ManaKovvali</title>
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mana Kovvali</title>
   <link rel="stylesheet" href="style.css" />
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    rel="stylesheet"
+  />
 </head>
 <body>
   <header>
-  <img src="logo.png" alt="Mana Kovvali Logo" class="site-logo" />
-    <h1>Welcome to Mana Kovvali</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#events">Events</a>
-      <a href="#contact">Contact</a>	 
-      <a href="jobs.html">Jobs</a>
-      <a href="#gallery">Gallery</a>
-    </nav>
+    <div class="container header-container">
+      <img src="logo.png" alt="Mana Kovvali Logo" class="site-logo" />
+      <h1>Welcome to Mana Kovvali</h1>
+      <nav id="navbar">
+        <a href="#about">About</a>
+        <a href="#events">Events</a>
+        <a href="#contact">Contact</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="#gallery">Gallery</a>
+      </nav>
+    </div>
   </header>
 
-  <section id="hero">
+  <section id="hero" class="container hero-section">
     <h2>Experience the Beauty of Our Village</h2>
     <p>Rich culture, friendly people, and beautiful landscapes.</p>
   </section>
 
-  <section id="about">
+  <section id="about" class="container section">
     <h2>About Our Village</h2>
     <p>
       Our village is located in the heart of the countryside. It is known for its lush green fields, traditional festivals, and warm hospitality. With a history dating back several centuries, we take pride in preserving our cultural heritage while embracing progress.
     </p>
   </section>
-  <section id="gallery">
-  <!DOCTYPE html>
 
-<head>
-  <meta charset="UTF-8">
-  <title>Image Slider Gallery</title>
+  <section id="gallery" class="container section">
+    <h2>Explore the Green Beauty of Mana Kovvali</h2>
+    <p>Get ready!</p>
 
-</head>
-<body>
+    <div class="slider-container">
+      <div class="slides" id="slides">
+        <div class="slide"><img src="1.jpg" alt="Image 1" /></div>
+        <div class="slide"><img src="2.jpg" alt="Image 2" /></div>
+        <div class="slide"><img src="3.jpg" alt="Image 3" /></div>
+      </div>
 
-<!-- ?? Image Gallery Slider -->
-<div class="slider-container" id="gallery">
-  <div class="slides" id="slides">
-    <div class="slide"><img src="1.jpg" alt="Image 1"></div>
-    <div class="slide"><img src="2.jpg" alt="Image 2"></div>
-    <div class="slide"><img src="3.jpg" alt="Image 3"></div>
-  </div>
-
-  <!-- ?? Navigation Buttons -->
-  <div class="navigation">
-    <button class="nav-button" onclick="prevSlide()">&#10094;</button>
-    <button class="nav-button" onclick="nextSlide()">&#10095;</button>
-  </div>
-</div>
-
-<script>
-  let currentIndex = 0;
-  const slides = document.getElementById('slides');
-  const totalSlides = document.querySelectorAll('.slide').length;
-
-  function showSlide(index) {
-    if (index >= totalSlides) currentIndex = 0;
-    else if (index < 0) currentIndex = totalSlides - 1;
-    else currentIndex = index;
-
-    slides.style.transform = 'translateX(' + (-currentIndex * 100) + '%)';
-  }
-
-  function nextSlide() {
-    showSlide(currentIndex + 1);
-  }
-
-  function prevSlide() {
-    showSlide(currentIndex - 1);
-  }
-</script>
-
-</body>
-</html>
-
-    <h2>explore the green beauty of manakovvali</h2>
-    <p>
-      GET READY
-    </p>
+      <div class="navigation">
+        <button class="nav-button" aria-label="Previous Slide" onclick="prevSlide()">&#10094;</button>
+        <button class="nav-button" aria-label="Next Slide" onclick="nextSlide()">&#10095;</button>
+      </div>
+    </div>
   </section>
 
-  <section id="events">
+  <section id="events" class="container section">
     <h2>Upcoming Events</h2>
     <ul class="event-list">
       <li>
-        <strong>Harvest Festival</strong> – September 10, 2025<br>
+        <strong>Harvest Festival</strong> – September 10, 2025<br />
         A day full of music, food, and traditional performances.
       </li>
     </ul>
   </section>
 
-  <section id="contact">
-    <h2>Contact Us:</h2>
-    <p>Village Office: VRO Office Main Road Kovvali Denduluru(MD) Eluru(DST) Andhra Pradesh(ST) India Pincode:534442 <br>
-    Phone: +91-8688493236<br>
-    Email: manakovvali@gmail.com</p>
-	
+  <section id="contact" class="container section">
+    <h2>Contact Us</h2>
+    <address>
+      Village Office: VRO Office Main Road Kovvali Denduluru (MD), Eluru (DST), Andhra Pradesh (ST), India - 534442<br />
+      Phone: <a href="tel:+918688493236">+91-8688493236</a><br />
+      Email: <a href="mailto:manakovvali@gmail.com">manakovvali@gmail.com</a><br />
+      <a href="https://www.google.com/maps/search/?api=1&query=Kovvali,+Andhra+Pradesh" target="_blank" class="map-icon" aria-label="Open location in Google Maps">
+        <i class="fas fa-map-marker-alt"></i> View on Map
+      </a>
+    </address>
 
-<head>
-  <meta charset="UTF-8">
-  <title>Google Maps Icon</title>
-  <!-- Font Awesome CDN for the map icon -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-</head>
-<body>
-
-  <!-- Google Maps icon that links to a location -->
-  <a href="https://www.google.com/maps/search/?api=1&query=Kovvali,+Andhra+Pradesh" target="_blank" class="map-icon">
-    <i class="fas fa-map-marker-alt"></i>
-  </a>
-
-</body>
-</html>
-    
-	  </a>
-	  <!-- Font Awesome for Icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-	  
-<!-- Facebook Icon Link -->
-<a href="https://www.facebook.com/profile.php?id=100064362655112" target="_blank" class="facebook-icon">
-  <i class="fab fa-facebook"></i>
-</a>
-  </p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/profile.php?id=100064362655112" target="_blank" aria-label="Facebook" class="facebook-icon">
+        <i class="fab fa-facebook"></i>
+      </a>
+    </div>
   </section>
-<section class=my-notes>
-    <h2 class=my-noteheader> My Heartfelt Note</h2>
-    <p class=my-notesbody>
-        “This website is born from love — a small gift to the village that shaped who I am. 
-        With the little knowledge and experience I’ve gathered, I hope to preserve our roots, 
-        connect our people, and help our community grow stronger, together. 
-        <strong>This is for Kovvali — my home, my pride.</strong>”
-    </p>
-</section>
 
+  <section class="container my-notes">
+    <h2 class="my-noteheader">My Heartfelt Note</h2>
+    <p class="my-notesbody">
+      “This website is born from love — a small gift to the village that shaped who I am.
+      With the little knowledge and experience I’ve gathered, I hope to preserve our roots,
+      connect our people, and help our community grow stronger, together.
+      <strong>This is for Kovvali — my home, my pride.</strong>”
+    </p>
+  </section>
 
   <footer>
     <p>&copy; 2025 Mana Kovvali. All rights reserved.</p>
-<img src="https://visitor-badge.laobi.icu/badge?page_id=manoj7573.manakovvali" alt="visitors">
-    </footer>
-  <script>
-  const menuToggle = document.getElementById('menu-toggle');
-  const navbar = document.getElementById('navbar');
+    <img
+      src="https://visitor-badge.laobi.icu/badge?page_id=manoj7573.manakovvali"
+      alt="visitor count badge"
+    />
+  </footer>
 
-  menuToggle.addEventListener('click', () => {
-    navbar.classList.toggle('active');
-  });
-</script>
+  <script>
+    let currentIndex = 0;
+    const slides = document.getElementById('slides');
+    const totalSlides = document.querySelectorAll('.slide').length;
+
+    function showSlide(index) {
+      if (index >= totalSlides) currentIndex = 0;
+      else if (index < 0) currentIndex = totalSlides - 1;
+      else currentIndex = index;
+
+      slides.style.transform = 'translateX(' + -currentIndex * 100 + '%)';
+    }
+
+    function nextSlide() {
+      showSlide(currentIndex + 1);
+    }
+
+    function prevSlide() {
+      showSlide(currentIndex - 1);
+    }
+
+    // Auto slide every 5 seconds
+    setInterval(() => nextSlide(), 5000);
+  </script>
 </body>
 </html>
