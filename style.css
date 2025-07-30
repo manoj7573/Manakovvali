@@ -164,4 +164,68 @@ background-color: #fdf6f0;
   text-align: center; 
   padding: 0 20px;
   }
- 
+  
+    .slider-container {
+      max-width: 600px;
+      position: relative;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 100%;
+    }
+
+    .slide {
+      min-width: 100%;
+      box-sizing: border-box;
+    }
+
+    .slide img {
+      width: 100%;
+      display: block;
+    }
+
+    .navigation {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .nav-button {
+      background-color: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    .nav-button:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+  <style>
+    .map-icon {
+      font-size: 30px;
+      color: #4285F4; /* Google Maps blue */
+      text-decoration: none;
+    }
+    .map-icon:hover {
+      color: #0b66c3;
+    }
+  </style>
+  <style>
+  .facebook-icon {
+    font-size: 30px;
+    color: #1877f2;
+    text-decoration: none;
+  }
+  .facebook-icon:hover {
+    color: #0d5ddb;
+  }
+</style>
