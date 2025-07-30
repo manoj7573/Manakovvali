@@ -16,7 +16,7 @@ body {
 
 /* Header */
 header {
-  background: #2c3e50;
+  background: #6B6E78;
   color: #fff;
   padding: 20px 0;
   text-align: center;
@@ -140,3 +140,28 @@ header {
   flex-direction: column;
   align-items: center;
 }
+
+.my-notes {
+ 
+background-color: #fdf6f0;
+ padding: 40px;
+ border-radius: 10px; 
+ max-width: 700px;
+ margin: 0 auto; 
+ font-family: 'Segoe UI', sans-serif; 
+ box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+ }
+ 
+ .my-noteheader {
+ color: #cc4e00; 
+ text-align: center;
+
+ }
+ .my-notesbody{
+  font-size: 18px;
+  line-height: 1.8; 
+  color: #333; 
+  text-align: center; 
+  padding: 0 20px;
+  }
+ 
