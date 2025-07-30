@@ -69,28 +69,6 @@ nav a:hover {
   color: white;
 }
 
-/* Hero Section */
-.hero-section {
-  background: url('hero-bg.jpg') center/cover no-repeat;
-  color: white;
-  text-align: center;
-  padding: 80px 20px;
-  border-radius: 10px;
-  margin-top: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-.hero-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
-}
-
-.hero-section p {
-  font-size: 1.2rem;
-  font-weight: 500;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-}
 
 /* Section titles */
 .section h2 {
@@ -258,4 +236,43 @@ footer img {
   .hero-section {
     padding: 50px 15px;
   }
+}
+
+  .my-notes {
+    max-width: 700px;
+    margin: 40px auto; /* Centers it horizontally */
+    background: #f0fdfa;
+    border-left: 5px solid #26a69a;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center; /* Centers the text inside */
+    box-shadow: 0 6px 15px rgba(38, 166, 154, 0.1);
+  }
+  .my-noteheader {
+    color: #004d40;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  .my-notesbody {
+    color: #333;
+    font-size: 1.1rem;
+    font-style: italic;
+    line-height: 1.6;
+  }
+/* Hero Section */
+
+#hero {
+  background: #e0f7f5; /* Light green background for better contrast */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#hero h2 {
+  color: #004d40; /* Dark green heading */
+  font-weight: 700;
+}
+
+#hero p {
+  color: #00695c; /* Medium green for subtext */
+  font-size: 1.2rem;
 }
