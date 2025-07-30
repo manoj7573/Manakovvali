@@ -31,6 +31,100 @@
     </p>
   </section>
   <section id="gallery">
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Slider Gallery</title>
+  <style>
+    .slider-container {
+      max-width: 600px;
+      position: relative;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 100%;
+    }
+
+    .slide {
+      min-width: 100%;
+      box-sizing: border-box;
+    }
+
+    .slide img {
+      width: 100%;
+      display: block;
+    }
+
+    .navigation {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .nav-button {
+      background-color: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    .nav-button:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+  </style>
+</head>
+<body>
+
+<!-- ?? Image Gallery Slider -->
+<div class="slider-container" id="gallery">
+  <div class="slides" id="slides">
+    <div class="slide"><img src="1.jpg" alt="Image 1"></div>
+    <div class="slide"><img src="2.jpg" alt="Image 2"></div>
+    <div class="slide"><img src="3.jpg" alt="Image 3"></div>
+  </div>
+
+  <!-- ?? Navigation Buttons -->
+  <div class="navigation">
+    <button class="nav-button" onclick="prevSlide()">&#10094;</button>
+    <button class="nav-button" onclick="nextSlide()">&#10095;</button>
+  </div>
+</div>
+
+<script>
+  let currentIndex = 0;
+  const slides = document.getElementById('slides');
+  const totalSlides = document.querySelectorAll('.slide').length;
+
+  function showSlide(index) {
+    if (index >= totalSlides) currentIndex = 0;
+    else if (index < 0) currentIndex = totalSlides - 1;
+    else currentIndex = index;
+
+    slides.style.transform = 'translateX(' + (-currentIndex * 100) + '%)';
+  }
+
+  function nextSlide() {
+    showSlide(currentIndex + 1);
+  }
+
+  function prevSlide() {
+    showSlide(currentIndex - 1);
+  }
+</script>
+
+</body>
+</html>
+
     <h2>explore the green beauty of manakovvali</h2>
     <p>
       GET READY
