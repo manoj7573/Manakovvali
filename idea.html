@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Village Ideas - Mana Kovvali</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #88d498, #4facfe);
+    margin: 0;
+    padding: 0;
+    color: white;
+  }
+  header {
+    text-align: center;
+    padding: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: rgba(0,0,0,0.3);
+  }
+  .container {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  input, textarea {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+  }
+  button {
+    padding: 10px;
+    margin-top: 10px;
+    background: #006400;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  button:hover {
+    background: #004d00;
+  }
+  .ideas {
+    margin-top: 20px;
+  }
+  .idea {
+    background: rgba(0,0,0,0.2);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+</style>
+</head>
+<body>
+
+<header>💡 Share Your Ideas to Improve Mana Kovvali</header>
+
+<div class="container">
+  <form id="ideaForm">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <textarea id="idea" placeholder="Your Idea" rows="3" required></textarea>
+    <button type="submit">Submit Idea</button>
+  </form>
+
+  <div class="ideas" id="ideasList">
+    <h3>Ideas Shared</h3>
+    <!-- Ideas will appear here -->
+  </div>
+</div>
+
+<script>
+const scriptURL = "YOUR_GOOGLE_SCRIPT_WEB_APP_URL"; // Replace with your Apps Script URL
+
+document.getElementById("ideaForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  const name = document.getElementById("name").value;
+  const idea = document.getElementById("idea").value;
+
+  fetch(scriptURL, {
+    method: "POST",
+    body: JSON.stringify({ name: name, idea: idea }),
+    headers: { "Content-Type": "application/json" }
+  })
+  .then(res => res.text())
+  .then(() => {
+    alert("Idea submitted successfully!");
+    document.getElementById("ideaForm").reset();
+    loadIdeas();
+  });
+});
+
+function loadIdeas() {
+  fetch(scriptURL)
+    .then(res => res.json())
+    .then(data => {
+      const ideasDiv = document.getElementById("ideasList");
+      ideasDiv.innerHTML = "<h3>Ideas Shared</h3>";
+      data.slice(1).reverse().forEach(row => {
+        ideasDiv.innerHTML += `<div class="idea"><strong>${row[1]}</strong>: ${row[2]}</div>`;
+      });
+    });
+}
+
+loadIdeas();
+</script>
+
+</body>
+</html>
