@@ -143,6 +143,25 @@
   window.addEventListener('scroll', checkFade);
   window.addEventListener('load', checkFade);
 </script>
-
+<script>
+window.addEventListener("scroll", function() {
+  const header = document.querySelector("header");
+  if (window.scrollY > 50) { // When scrolled more than 50px
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+});
+</script>
+<script>
+window.addEventListener("scroll", function() {
+  const header = document.querySelector("header");
+  if (window.scrollY > 50) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+});
+</script>
 </body>
 </html>

@@ -21,14 +21,34 @@ body {
 
 /* Header */
 header {
-  background-color: #004d40;
+  background-color: #004d40; /* Dark at top */
+  color: #fff; /* White text at top */
   position: sticky;
   top: 0;
   z-index: 1000;
-  color: #fff;
   padding: 10px 20px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+#navbar a {
+  color: #fff; /* Default white links */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+header.scrolled {
+  background-color: #e0f2f1; /* Light background */
+  color: #004d40; /* Dark green text */
+}
+
+header.scrolled #navbar a {
+  color: #004d40; /* Dark green links */
+}
+
+#navbar a:hover {
+  text-decoration: underline;
+}
+
 
 .header-container {
   display: flex;
