@@ -48,7 +48,9 @@ header.scrolled #navbar a {
 #navbar a:hover {
   text-decoration: underline;
 }
-
+section {
+  scroll-margin-top: 80px; /* same as header height */
+}
 
 .header-container {
   display: flex;
