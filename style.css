@@ -371,3 +371,30 @@ footer img {
       font-weight: 700;
       margin-bottom: 10px;
     }
+    .styled-link {
+  position: relative;
+  color: #00695c; /* Teal color */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.styled-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #004d40; /* Darker teal for underline */
+  transition: width 0.3s ease;
+}
+
+.styled-link:hover {
+  color: #004d40;
+}
+
+.styled-link:hover::after {
+  width: 100%;
+}
+    
