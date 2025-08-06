@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mana Kovvali</title>
-  <link rel="icon" type="image/png" href="logo.png">
   <link rel="stylesheet" href="style.css" />
   <link
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -15,7 +14,7 @@
   <header>
     <div class="container header-container">
 
-      <h1><img src="logo.png" alt="Mana Kovvali Logo" class="site-logo" /> Mana Kovvali</h1>
+      <h1> Mana Kovvali</h1>
       <nav id="navbar">
         <a href="#about">About</a>
         <a href="#events">Events</a>
@@ -29,33 +28,83 @@
   </header>
 
 <section id="hero">
-  <h2>Uniting Our Community</h2>
-  <p>A connected community grows stronger when everyone contributes. Together, we create a space where every voice matters and build a better future for all.</p>
+  <h1>Uniting Our Community</h1>
+  <p>We created this platform to unite our community — a place where we can grow, support, and inspire one another. Together, we can make our community stronger, brighter, and better for everyone. Your support and participation will help bring this vision to life.</p>
 </section>
 
+  <!-- Key Features -->
+  <section id="events" class="container section fade-section">
+    <h2>Key Features</h2>
+    <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <div class="container my-5">
+
+  <div class="row g-4">
+
+    <!-- Feature 1 -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm border-0">
+        <div class="card-body text-center">
+          <div class="mb-3 text-success" style="font-size: 2rem;">
+            <i class="fa fa-users"></i>
+          </div>
+          <h5 class="card-title fw-bold">Community Engagement</h5>
+          <p class="card-text">Bringing people together to share ideas, collaborate, and grow as a united community.</p>
+          <p class="card-text">Coming Soon...</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feature 2 -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm border-0">
+        <div class="card-body text-center">
+          <div class="mb-3 text-success" style="font-size: 2rem;">
+            <i class="fa fa-briefcase"></i>
+          </div>
+          <h5 class="card-title fw-bold" >Job Opportunities</h5>
+          <p class="card-text">A space to share job referrals and opportunities that could benefit members of the community.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feature 3 -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm border-0">
+        <div class="card-body text-center">
+          <div class="mb-3 text-success" style="font-size: 2rem;">
+            <i class="fa fa-trophy"></i>
+          </div>
+          <h5 class="card-title fw-bold">Events & Contests</h5>
+          <p class="card-text">Encouraging participation in fun and meaningful contests to showcase talent and creativity.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Font Awesome for Icons -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+  </section>
 <!-- Events -->
   <section id="events" class="container section fade-section">
     <h2>Upcoming Events</h2>
     <ul class="event-list">
       <li>
-        <strong>Logo COntest</strong> – Coming Soon<br />
+        <strong>Logo Contest</strong> – Coming Soon<br />
+        <a href="logo.html">Click to submit your logo</a>
         
       </li>
     </ul>
   </section>
-  <!-- About -->
-  <section id="about" class="container section fade-section">
-    <h2>About Our Village</h2>
-    <p>
-      Our village is located in the heart of the countryside. It is known for its lush green fields, traditional festivals, and warm hospitality. With a history dating back several centuries, we take pride in preserving our cultural heritage while embracing progress.
-    </p>
-  </section>
+
 <!-- Gallery Section -->
 
 
   <section id="gallery" class="container section fade-section">
     <h2>Explore the Green Beauty</h2>
-    <p></p>
+    <p>More picutes to be added.</p>
 
     <div class="slider-container">
       <div class="slides" id="slides">
@@ -70,24 +119,29 @@
     </div>
   </section>
 
-
+  <!-- About -->
+  <section id="about" class="container section fade-section">
+    <h2>About Our Village</h2>
+    <p>
+      Our village is located in the heart of the countryside. It is known for its lush green fields, traditional festivals, and warm hospitality. With a history dating back several centuries, we take pride in preserving our cultural heritage while embracing progress.
+    </p>
+  </section>
 
   <section id="contact" class="container section fade-section">
     <h2>Contact Us</h2>
     <address>
-      Village Office: VRO Office Main Road Kovvali Denduluru (MD), Eluru (DST), Andhra Pradesh (ST), India - 534442<br />
+      Village Office: Kovvali,
+      Denduluru (MD), Eluru (DST), Andhra Pradesh (ST), India - 534442<br />
       Phone: <a href="tel:+918688493236">+91-8688493236</a><br />
       Email: <a href="mailto:manakovvali@gmail.com">manakovvali@gmail.com</a><br />
       <a href="https://www.google.com/maps/search/?api=1&query=Kovvali,+Andhra+Pradesh" target="_blank" class="map-icon" aria-label="Open location in Google Maps">
         <i class="fas fa-map-marker-alt"></i> View on Map
       </a>
-    </address>
-
-    <div class="social-icons">
-      <a href="https://www.facebook.com/profile.php?id=100064362655112" target="_blank" aria-label="Facebook" class="facebook-icon">
+            <a href="https://www.facebook.com/profile.php?id=100064362655112" target="_blank" aria-label="Facebook" class="facebook-icon">
         <i class="fab fa-facebook"></i>
       </a>
-    </div>
+    </address>
+
   </section>
 
 <section class="my-notes fade-section">
@@ -98,6 +152,7 @@
     connect our people, and help our community grow stronger, together.
     <strong>This is for Kovvali — my home, my pride.</strong>”
   </p>
+  <p> Happy to hear your feedback. Send to: manakovvali@gmail.com</p>
 </section>
 
 

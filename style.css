@@ -336,3 +336,38 @@ footer img {
   opacity: 1;
   transform: translateY(0);
 }
+/* for jobs html */
+
+
+    #h2 {
+      color: #004d40;
+      font-weight: 700;
+      margin-bottom: 25px;
+      text-align: center;
+      border-bottom: 3px solid #26a69a;
+      padding-bottom: 8px;
+    }
+    #jobSearch {
+      border: 2px solid #26a69a;
+      border-radius: 30px;
+      padding: 10px 20px;
+      margin-bottom: 25px;
+      width: 250px;
+    }
+    #jobSearch:focus {
+      border-color: #004d40;
+      outline: none;
+    }
+    .job-card {
+      border-left: 5px solid #26a69a;
+      background: #f8fff8;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgb(38 166 154 / 0.1);
+    }
+    .job-card h5 {
+      color: #004d40;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
